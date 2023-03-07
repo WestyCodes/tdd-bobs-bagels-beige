@@ -14,7 +14,7 @@ class Basket {
       if (!this.basketIsFull()) {
         this.IDcounter++;
         const id = this.IDcounter;
-        let bagelItem = new Bagel(SKU, id);
+        const bagelItem = new Bagel(SKU, id);
         this.contents.push(bagelItem);
       }
     }
@@ -42,17 +42,6 @@ class Basket {
     const output = new Bagel(SKU);
     return output.price;
   }
-  /*
-    getTotal() {
-        let total = 0
-        this.checkDeals()
-        console.log(this.countBagelsinBasket())
-      for (let i = 0; i < this.contents.length; i++) {
-         total += this.contents[i].price * 100
-      }
-     return total/100
-    }
-*/
 
   countBagelsInBasket() {
     this.counts = {};
@@ -119,13 +108,6 @@ class Basket {
 
     return Number(total.toFixed(2));
   }
-
-  /*this.contents.filter()
-        for(let i = 0; i < this.contents.length; i++){
-            for (let j = 0; j < )
-        }
-    }
-    */
 }
 
 module.exports = Basket;
